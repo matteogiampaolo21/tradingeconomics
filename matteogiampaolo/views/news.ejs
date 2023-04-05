@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="headline-main"> <%= titlePage %> News</h1>
+    <div class="thin-line"></div>
+    <div class="bold-line"></div>
+
+    <div class="navbar">
+        <a href="/"><h4>Latest</h4></a>
+        <a href="/news/mexico"><h4>Mexico</h4></a>
+        <a href="/news/new zealand"><h4>New Zealand</h4></a>
+        <a href="/news/sweden"><h4>Sweden</h4></a>
+        <a href="/news/thailand"><h4>Thailand</h4></a>
+    </div>
+    <div class="thin-line"></div>
+
+    <div class="grid-container">
+        <div class="main-item">
+            <h3> <%= fourArticles[0].title %> </h3>
+            <p> <%= fourArticles[0].description %> </p>
+            <p class="article-date"> <%= fourArticles[0].date.slice(0, 10) %> | Category: <%= fourArticles[0].category %> </p>
+        </div>
+        <div class="header-item"> 
+            <h3> <%= fourArticles[1].title %> </h3>
+            <p> <%= fourArticles[1].description %> </p>
+            <p class="article-date"> <%= fourArticles[1].date.slice(0, 10) %> | Category: <%= fourArticles[1].category %> </p>
+        </div>
+        <div class="middle-item"> 
+            <h3> <%= fourArticles[2].title %> </h3>
+            <p> <%= fourArticles[2].description %> </p>
+            <p class="article-date"> <%= fourArticles[2].date.slice(0, 10) %> | Category: <%= fourArticles[2].category %> </p>
+        </div>
+        <div class="footer-item"> 
+            <h3> <%= fourArticles[3].title %> </h3>
+            <p> <%= fourArticles[3].description %> </p>
+            <p class="article-date"> <%= fourArticles[3].date.slice(0, 10) %> | Category: <%= fourArticles[3].category %> </p>
+        </div>
+    </div>
+    
+</body>
+</html>
