@@ -3,7 +3,10 @@ h2{
 }
 body{
     margin: 50px 250px ;
-    background-color: #f0f0ef;
+    background-color: #f4f4f4;
+    background-image:  radial-gradient(#949494 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(#a7a7a7 1.4000000000000001px, #f4f4f4 1.4000000000000001px);
+    background-size: 126px 126px;
+    background-position: 0 0,28px 28px;
 }
 a{
     color: black;
@@ -12,18 +15,18 @@ a{
     font-family: Arial, Helvetica, sans-serif;
 }
 a:hover{
-    color: #462eff;
+    color: #ff5c5c;
     font-weight: bolder;
 }
 
 .bold-line{
-    background-color: #686868;
+    background-color: #dcdcdc;
     height: 10px;
     margin: 2px 0;
     text-decoration: underline;
 }
 .thin-line{
-    background-color: #686868;
+    background-color: #dcdcdc;
     height: 5px;
     margin: 3px 0;
     text-decoration: underline;
@@ -34,7 +37,7 @@ a:hover{
 
 /* homepage */
 .headline-main{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 5rem;
     text-align: center;
     margin: 15px 0;
@@ -45,35 +48,78 @@ a:hover{
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 1.4rem;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 15px #eeeeee;
+    border-radius: 5px;
 }
 .grid-container{
     display: grid;
     grid-template-areas: 
-        "main main main main header header header header header header"
-        "main main main main header header header header header header"
-        "main main main main header header header header header header"
-        "main main main main header header header header header header"
-        "main main main main middle middle middle middle middle middle"
-        "main main main main middle middle middle middle middle middle"
-        "main main main main middle middle middle middle middle middle"
-        "footer footer footer footer footer footer footer footer footer footer"
-        "footer footer footer footer footer footer footer footer footer footer"
-        "footer footer footer footer footer footer footer footer footer footer"
-        "footer footer footer footer footer footer footer footer footer footer";
-    column-gap: 60px;
-    row-gap: 40px;
-    margin: 50px 0px;
+        "main main  header header header "
+        "main main  header header header "
+        "main main  header header header "
+        "main main  header header header "
+        "main main  middle middle middle "
+        "main main  middle middle middle "
+        "main main  middle middle middle "
+        "footer footer footer footer footer "
+        "footer footer footer footer footer "
+        "footer footer footer footer footer "
+        "footer footer footer footer footer ";
+    column-gap: 15px;
+    row-gap: 15px;
+    margin: 20px 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
         
 }
-.main-item{grid-area: main;padding-right:20px ; border-right: solid #7d7d7d 2px;}
-.header-item{grid-area: header;padding-bottom:20px ;border-bottom: solid #7d7d7d 2px;}
-.middle-item{grid-area: middle;padding-bottom:20px ;}
-.footer-item{grid-area: footer;padding-bottom:20px ;border-bottom: solid #7d7d7d 2px;}
+.reverse-grid-container{
+    display: grid;
+    grid-template-areas: 
+        "header header header  main main "
+        "header header header  main main "
+        "header header header  main main "
+        "header header header  main main "
+        "middle middle middle  main main "
+        "middle middle middle  main main "
+        "middle middle middle  main main "
+        "footer footer footer footer footer "
+        "footer footer footer footer footer "
+        "footer footer footer footer footer "
+        "footer footer footer footer footer ";
+    column-gap: 15px;
+    row-gap: 15px;
+    margin: 40px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.main-item{grid-area: main;}
+.header-item{grid-area: header;}
+.middle-item{grid-area: middle;}
+.footer-item{grid-area: footer;}
+
+.item{
+    text-align: justify;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 15px #eeeeee;
+}
 
 .article-date{
     font-size: 1rem;
     color: #797979;
 }
-
+.title{
+    background-color: #ff5c5c;
+    color: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    padding: 35px 0px;
+    box-shadow: 2px 4px 15px #ff9393;
+}
+.title h1{
+    margin:0;
+}
