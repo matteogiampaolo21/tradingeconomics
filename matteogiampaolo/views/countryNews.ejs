@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="title"><h1 class="headline-main"> <%= titlePage %> News</h1></div>
+
+    <div class="navbar">
+        <a href="/"><h4>Latest</h4></a>
+        <a href="/news/mexico"><h4>Mexico</h4></a>
+        <a href="/news/new zealand"><h4>New Zealand</h4></a>
+        <a href="/news/sweden"><h4>Sweden</h4></a>
+        <a href="/news/thailand"><h4>Thailand</h4></a>
+    </div>
+
+    <div>
+        <% for(var i=0; i < fourArticles.length -1; i++) {%>
+            <div style="margin: 30px 0;" class="main-item item">
+                <h3> <%= fourArticles[i].title %> </h3>
+                <p> <%= fourArticles[i].description %> </p>
+                <p class="article-date"> <%= fourArticles[i].date.slice(0, 10) %> | Category: <%= fourArticles[i].category %> </p>
+            </div>
+         <% } %>
+    </div>
+    
+</body>
+</html>

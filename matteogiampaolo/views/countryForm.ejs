@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="title"><h1 class="headline-main">News</h1></div>
+
+    <div class="navbar">
+        <a href="/"><h3>Latest</h3></a>
+        <a href="/news/mexico"><h3>Mexico</h3></a>
+        <a href="/news/new zealand"><h3>New Zealand</h3></a>
+        <a href="/news/sweden"><h3>Sweden</h3></a>
+        <a href="/news/thailand"><h3>Thailand</h3></a>
+    </div>
+
+    <form action="/getArticles" method="POST" class="country-form">
+        <input name="startDate" type="date" >
+        <span style="font-size: 1.4rem; margin: 0 15px; font-weight: bolder;"> : </span>
+        <input name="endDate" type="date" >
+
+        <input class="country-dropdown" placeholder="Select Country" list="countries" id="country" name="country">
+        <datalist id="countries">
+            <option value="Mexico">
+            <option value="New Zealand">
+            <option value="Sweden">
+            <option value="Thailand">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+
+    
+</body>
+</html>

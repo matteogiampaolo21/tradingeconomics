@@ -1,12 +1,16 @@
 h2{
     font-family: Arial, Helvetica, sans-serif;
 }
+h3{
+    text-align: left !important;
+}
 body{
     margin: 50px 250px ;
     background-color: #f4f4f4;
     background-image:  radial-gradient(#949494 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(#a7a7a7 1.4000000000000001px, #f4f4f4 1.4000000000000001px);
     background-size: 126px 126px;
     background-position: 0 0,28px 28px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 a{
     color: black;
@@ -118,8 +122,49 @@ a:hover{
     margin: 20px 0;
     border-radius: 5px;
     padding: 35px 0px;
-    box-shadow: 2px 4px 15px #ff9393;
+    box-shadow: 2px 4px 15px #ffb9b9;
 }
 .title h1{
     margin:0;
+}
+input[type="date"]{
+    background-color: #ff5c5c;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    font-size: 1.4rem;
+    padding:10px;
+    border: 2px solid #ff5c5c !important;
+    transition: 0.3s;
+}
+input[type="date"]:hover{
+    background-color: white;
+    color: #ff5c5c;
+
+}
+input[type="submit"]{
+    background-color: white;
+    color:#ff5c5c;
+    font-size: 1.4rem;
+
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: solid 2px #ff5c5c;
+}
+input[type="submit"]:hover{
+    background-color: #ff5c5c;
+    color:white;
+}
+.country-form{
+    text-align: center;
+    margin: 50px 0;
+}
+.country-dropdown{
+    font-size: 1.4rem;
+    border: #ff5c5c solid 2px;
+    border-radius: 5px;
+    color: #ff5c5c;
+    padding: 10px 0 10px 10px
 }
