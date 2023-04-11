@@ -12,11 +12,10 @@
     <div class="title"><h1 class="headline-main">News</h1></div>
 
     <div class="navbar">
-        <a href="/"><h3>Latest</h3></a>
-        <a href="/news/mexico"><h3>Mexico</h3></a>
-        <a href="/news/new zealand"><h3>New Zealand</h3></a>
-        <a href="/news/sweden"><h3>Sweden</h3></a>
-        <a href="/news/thailand"><h3>Thailand</h3></a>
+        <a href="/news/page/1"><h3>Latest News</h3></a>
+        <a href="/breaking-news"><h3>Breaking News</h3></a>
+        <a href="/news"><h3>Countries</h3></a>
+        
     </div>
 
     <form action="/getArticles" method="POST" class="country-form">
@@ -24,7 +23,7 @@
         <span style="font-size: 1.4rem; margin: 0 15px; font-weight: bolder;"> : </span>
         <input name="endDate" type="date" >
 
-        <input class="country-dropdown" placeholder="Select Country" list="countries" id="country" name="country">
+        <input class="country-dropdown" style="margin: 0 15px;" placeholder="Select Country" list="countries" id="country" name="country">
         <datalist id="countries">
             <option value="Mexico">
             <option value="New Zealand">

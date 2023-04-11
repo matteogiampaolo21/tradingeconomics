@@ -7,11 +7,15 @@ app.set('view engine', 'ejs');
 
 const port = 3000;
 app.use(express.static(__dirname + '/public'));
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 require("dotenv").config();
 
 te.login(process.env.TRADE_KEY);
+
+app.get("/", async (req,res) => {
+    res.redirect("/news/page/1")
+})
 
 app.get("/news/page/:number", async (req, res) => {
     const numParam = req.params.number
@@ -25,14 +29,35 @@ app.get("/news/page/:number", async (req, res) => {
     res.render("latestNews",{fourArticles : data1, titlePage :  "Latest" , firstPage : firstPageBoolean, pageNumber : parseInt(numParam)});
 });
 
+
+app.get("/breaking-news", async (req,res) => {
+    const date1 = new Date().getMonth()+1;
+    const date2 = new Date().getDate();
+    const date3 = new Date().getFullYear();
+
+    var days = 14
+    var date = new Date();
+    var last = new Date(date.getTime() - (days * 24 * 60 * 60 * 1000));
+    var day =last.getDate();
+    var month=last.getMonth()+1;
+    var year=last.getFullYear();
+
+    const first_date = `${date1}-${date2}-${date3}`
+    const second_date = `${month}-${day}-${year}`
+
+    console.log(second_date,first_date);
+
+    let data = await te.getNews(start_date = second_date, end_date = first_date)
+    console.log(data)
+    data = data.filter(obj => obj.importance > 2);
+    console.log(data)
+    res.render("breaking",{articles:data, titlePage: "Breaking"})
+})
+
+
 app.get("/news", async (req, res) => {
     res.render("countryForm");
 });
-
-app.get("/", async (req,res) => {
-    res.render("home")
-})
-
 
 app.post("/getArticles", async (req,res) => {
     

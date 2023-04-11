@@ -8,7 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-
     <div class="title"><h1 class="headline-main"> <%= titlePage %> News</h1></div>
 
     <div class="navbar">
@@ -17,16 +16,18 @@
         <a href="/news"><h3>Countries</h3></a>
         
     </div>
-
-    <div>
-        <% for(var i=0; i < fourArticles.length -1; i++) {%>
+    <% if (articles.length === 0) { %>
+        <div style="margin: 30px 0;text-align: center;font-size: 1.4rem;" class="main-item item">
+            <p>There are no breaking news within the last 14 days.</p>
+        </div>
+    <%} else { %>
+        <% for(var i=0; i <= articles.length -1 ; i++) {%>
             <div style="margin: 30px 0;" class="main-item item">
-                <h3> <%= fourArticles[i].title %> </h3>
-                <p> <%= fourArticles[i].description %> </p>
-                <p class="article-date"> <%= fourArticles[i].date.slice(0, 10) %> | Category: <%= fourArticles[i].category %> </p>
+                <h3> <%= articles[i].title %> </h3>
+                <p> <%= articles[i].description %> </p>
+                <p class="article-date"> <%= articles[i].date.slice(0, 10) %> | Category: <%= articles[i].category %> </p>
             </div>
-         <% } %>
-    </div>
-    
+        <% } %>
+    <% } %>
 </body>
 </html>
