@@ -25,7 +25,6 @@ app.get("/news/page/:number", async (req, res) => {
     if (numParam === "1"){
         firstPageBoolean = true;
     }
-    console.log(data1.length)
     res.render("latestNews",{fourArticles : data1, titlePage :  "Latest" , firstPage : firstPageBoolean, pageNumber : parseInt(numParam)});
 });
 
@@ -45,12 +44,9 @@ app.get("/breaking-news", async (req,res) => {
     const first_date = `${date1}-${date2}-${date3}`
     const second_date = `${month}-${day}-${year}`
 
-    console.log(second_date,first_date);
 
     let data = await te.getNews(start_date = second_date, end_date = first_date)
-    console.log(data)
     data = data.filter(obj => obj.importance > 2);
-    console.log(data)
     res.render("breaking",{articles:data, titlePage: "Breaking"})
 })
 

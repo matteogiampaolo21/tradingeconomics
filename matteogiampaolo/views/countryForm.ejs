@@ -19,18 +19,21 @@
     </div>
 
     <form action="/getArticles" method="POST" class="country-form">
-        <input name="startDate" type="date" >
-        <span style="font-size: 1.4rem; margin: 0 15px; font-weight: bolder;"> : </span>
-        <input name="endDate" type="date" >
+        <div>
+            <input name="startDate" type="date" >
+            
+            <input name="endDate" type="date" >
 
-        <input class="country-dropdown" style="margin: 0 15px;" placeholder="Select Country" list="countries" id="country" name="country">
-        <datalist id="countries">
-            <option value="Mexico">
-            <option value="New Zealand">
-            <option value="Sweden">
-            <option value="Thailand">
-        </datalist>
-        <input type="submit" value="Submit">
+            <input class="country-dropdown"  placeholder="Select Country" list="countries" id="country" name="country">
+            <datalist id="countries">
+                <option value="Mexico">
+                <option value="New Zealand">
+                <option value="Sweden">
+                <option value="Thailand">
+            </datalist>
+            <input type="submit" value="Submit">
+        </div>
+        <div style="margin: 20px 20px 0px ;color: rgb(71, 71, 71);">Request all news relating to the chosen country and the two dates. </div>
     </form>
 
     
