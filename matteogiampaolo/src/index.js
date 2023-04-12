@@ -66,6 +66,11 @@ app.post("/getArticles", async (req,res) => {
 })
 
 
+app.get('*', function(req, res){
+    res.status(404).send('Page could not be found.');
+});
+
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
